@@ -1,0 +1,35 @@
+[user]
+	name = Michael Fairley
+	email = michaelfairley@gmail.com
+
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        interactive = auto
+        ui = true
+        pager = true
+
+[alias]
+	caach = commit -a --amend -C HEAD
+	cam = commit -a -m
+	co = checkout
+	cob = checkout -b
+	l = log
+	p = push
+	d = diff
+	s = status
+	b = branch
+	stage = push staging master
+	stagef = push staging master -f
+	pr = pull --rebase origin master
+	prune-local = !sh -c 'git branch --merged | grep -v "^*" | xargs git branch -d'
+	prune-remote = !sh -c 'git fetch $1 && git remote-master-merged $1 | xargs git push --delete $1' -
+	remote-master-merged = !sh -c 'git remote-merged-refs \"$1\" master' -
+	remote-merged-refs = !sh -c 'git branch -r --merged $2 | grep \"^  $1/\" | grep -v "HEAD" | cut -d/ -f2- | grep -vx $2' -
+[heroku]
+	account = mf
+[core]
+	excludesfile = /Users/michaelfairley/.gitignore
+[push]
+	default = current
