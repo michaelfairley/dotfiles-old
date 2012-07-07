@@ -63,3 +63,8 @@
 
 (global-auto-revert-mode 1)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(require 'textmate)
+(require 'peepopen)
+(textmate-mode)
+(setq ns-pop-up-frames nil)
