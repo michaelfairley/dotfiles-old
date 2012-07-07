@@ -1,5 +1,6 @@
 eval "$(rbenv init -)"
 
+export PATH=/usr/local/bin:$PATH
 export EDITOR="emacs -nw"
 
 alias grep="grep --color=auto"
