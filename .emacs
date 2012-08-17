@@ -19,10 +19,6 @@
 (setq auto-mode-alist (cons '("\\.scss.erb$" . scss-mode) auto-mode-alist))
 (setq scss-compile-at-save nil)
 
-;;; rhtml mode
-(add-to-list 'load-path "~/.emacs.d/rhtml")
-(require 'rhtml-mode)
-
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t)
