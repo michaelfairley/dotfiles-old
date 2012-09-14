@@ -68,3 +68,5 @@
 (require 'peepopen)
 (textmate-mode)
 (setq ns-pop-up-frames nil)
+
+(require 'rspec-mode)
