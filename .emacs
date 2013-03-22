@@ -4,12 +4,14 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 
-;;; emacs compatability stuff
-(aquamacs-autoface-mode -1)
-(remove-hook 'text-mode-hook 'auto-detect-wrap)
-(tabbar-mode -1)		     ; no tabbar
-(tool-bar-mode 0) ; turn off toolbar
-(setq special-display-regexps nil)   ; do not open certain buffers in special windows/frames
+(when (boundp 'aquamacs-version)
+  ;;; emacs compatability stuff
+  (aquamacs-autoface-mode -1)
+  (remove-hook 'text-mode-hook 'auto-detect-wrap)
+  (tabbar-mode -1)		     ; no tabbar
+  (tool-bar-mode 0) ; turn off toolbar
+  (setq special-display-regexps nil)   ; do not open certain buffers in special windows/frames
+)
 
 (add-to-list 'load-path "~/.emacs.d")
 (require 'haml-mode)
