@@ -5,6 +5,7 @@ export EDITOR="emacs -nw"
 
 alias grep="grep --color=auto"
 alias g="git"
+alias gt="git status"
 alias be="bundle exec"
 
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
