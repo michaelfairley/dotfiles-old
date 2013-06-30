@@ -1,17 +1,30 @@
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
+(when (not (featurep 'aquamacs))
+  (require 'package)
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (package-initialize)
+  (unless (package-installed-p 'scala-mode2)
+    (package-refresh-contents) (package-install 'scala-mode2))
+)
 
-(when (boundp 'aquamacs-version)
-  ;;; emacs compatability stuff
+;;; emacs compatability stuff
+(when (featurep 'aquamacs)
   (aquamacs-autoface-mode -1)
   (remove-hook 'text-mode-hook 'auto-detect-wrap)
   (tabbar-mode -1)		     ; no tabbar
   (tool-bar-mode 0) ; turn off toolbar
   (setq special-display-regexps nil)   ; do not open certain buffers in special windows/frames
-)
+  )
+
 
 (add-to-list 'load-path "~/.emacs.d")
 (require 'haml-mode)
@@ -24,10 +37,6 @@
 ;;; rhtml mode
 (add-to-list 'load-path "~/.emacs.d/rhtml")
 (require 'rhtml-mode)
-
-(require 'ido)
-(ido-mode t)
-(setq ido-enable-flex-matching t)
 
 (require 'yaml-mode)
 
@@ -72,3 +81,6 @@
 (setq ns-pop-up-frames nil)
 
 (require 'rspec-mode)
+
+(autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
+(add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
