@@ -33,6 +33,7 @@
 (setq auto-mode-alist (cons '("\\.scss$" . scss-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.scss.erb$" . scss-mode) auto-mode-alist))
 (setq scss-compile-at-save nil)
+(setq auto-mode-alist (cons '("\\.css.erb$" . css-mode) auto-mode-alist))
 
 ;;; rhtml mode
 (add-to-list 'load-path "~/.emacs.d/rhtml")
@@ -84,3 +85,5 @@
 
 (autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
+
+(setq ruby-deep-indent-paren nil)
