@@ -26,6 +26,11 @@
   )
 
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
 (add-to-list 'load-path "~/.emacs.d")
 (require 'haml-mode)
 (require 'scss-mode)
@@ -35,9 +40,12 @@
 (setq scss-compile-at-save nil)
 (setq auto-mode-alist (cons '("\\.css.erb$" . css-mode) auto-mode-alist))
 
-;;; rhtml mode
-(add-to-list 'load-path "~/.emacs.d/rhtml")
-(require 'rhtml-mode)
+;; ;;; rhtml mode
+;; (add-to-list 'load-path "~/.emacs.d/rhtml")
+;; (require 'rhtml-mode)
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
 
 (require 'yaml-mode)
 
@@ -61,10 +69,6 @@
 (setq auto-mode-alist (cons '("\\.coffee.erb$" . coffee-mode) auto-mode-alist))
 
 (setq auto-mode-alist (cons '("\\.js.erb$" . javascript-mode) auto-mode-alist))
-
-(add-to-list 'load-path "~/.emacs.d/feature-mode")
-(require 'feature-mode)
-(setq auto-mode-alist (cons '("\\.feature$" . feature-mode) auto-mode-alist))
 
 (require 'magit)
 
