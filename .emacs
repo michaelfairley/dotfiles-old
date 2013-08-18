@@ -93,3 +93,6 @@
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
 
 (setq ruby-deep-indent-paren nil)
+
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
