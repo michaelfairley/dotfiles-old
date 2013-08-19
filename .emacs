@@ -96,6 +96,7 @@
 
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message "michaelfairley")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
