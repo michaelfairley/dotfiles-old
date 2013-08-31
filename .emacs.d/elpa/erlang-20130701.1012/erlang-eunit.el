@@ -386,7 +386,7 @@ With prefix arg, compiles for debug and runs tests with the verbose flag set."
 			(setq result t)
 			(setq continue nil)))
 		    result))
-     (mapcar (lambda (e) (car e)) erlang-error-regexp-alist))))
+     (list (cadr (assoc 'gnu compilation-error-regexp-alist-alist))))))
 
 (defun erlang-eunit-is-compilation-warning ()
   (erlang-eunit-string-match-p

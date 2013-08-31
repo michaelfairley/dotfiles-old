@@ -109,3 +109,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(require 'erlang)
+(require 'erlang-start)
+(require 'erlang-autoloads)
+(require 'erlang-eunit)
+(require 'erlang-flymake)
+(require 'flymake-cursor)
+(setq erlang-eunit-autosave t)
