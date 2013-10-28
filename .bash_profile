@@ -2,6 +2,8 @@ eval "$(rbenv init -)"
 
 export PATH=/usr/local/bin:$PATH
 export EDITOR="emacs -nw"
+export GOPATH="$HOME/p/gopath"
+export PATH=${PATH}:${GOPATH}/bin
 
 alias grep="grep --color=auto"
 alias g="git"
