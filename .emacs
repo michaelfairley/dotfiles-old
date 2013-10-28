@@ -116,3 +116,6 @@
 (require 'erlang-flymake)
 (require 'flymake-cursor)
 (setq erlang-eunit-autosave t)
+
+(add-to-list 'load-path "~/p/gopath/src/github.com/dougm/goflymake")
+(require 'go-flymake)
