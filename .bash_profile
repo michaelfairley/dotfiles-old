@@ -4,6 +4,7 @@ export PATH=/usr/local/bin:$PATH
 export EDITOR="emacs -nw"
 export GOPATH="$HOME/p/gopath"
 export PATH=${PATH}:${GOPATH}/bin
+export ERL_LIBS="$HOME/p/erllibs"
 
 alias grep="grep --color=auto"
 alias g="git"
