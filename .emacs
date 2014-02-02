@@ -62,6 +62,7 @@
 (setq css-indent-offset 2)
 (setq c-basic-offset 2)
 (setq tab-width 2)
+(setq indent-tabs-mode nil)
 
 (require 'slim-mode)
 (setq auto-mode-alist (cons '("\\.slim$" . slim-mode) auto-mode-alist))
@@ -119,3 +120,4 @@
 
 (add-to-list 'load-path "~/p/gopath/src/github.com/dougm/goflymake")
 (require 'go-flymake)
+(add-hook 'before-save-hook 'gofmt-before-save)
