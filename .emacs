@@ -62,7 +62,7 @@
 (setq css-indent-offset 2)
 (setq c-basic-offset 2)
 (setq tab-width 2)
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 (require 'slim-mode)
 (setq auto-mode-alist (cons '("\\.slim$" . slim-mode) auto-mode-alist))
