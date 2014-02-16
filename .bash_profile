@@ -16,4 +16,8 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
   __git_complete g __git_main
 fi
 
+if [ -f ~/.maven-completion.bash ]; then
+  . ~/.maven-completion.bash
+fi
+
 export PS1='\W\[\033[32m\]$(__git_ps1) \[\033[0m\]$ '
